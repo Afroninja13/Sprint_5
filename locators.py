@@ -2,15 +2,13 @@ from selenium.webdriver.common.by import By
 
 
 class TestLocators:
-    NAME_REG_FORM = By.CSS_SELECTOR, '* > fieldset:nth-child(1) > div > div > input'  # Поле Name в форме регистрации
-    EMAIL_REG_FORM = By.CSS_SELECTOR, '* > fieldset:nth-child(2) > div > div > input'  # Поле Email в форме регистрации
-    PASSWORD_REG_FORM = By.CSS_SELECTOR, '* > fieldset:nth-child(3) > div > div > input'  # Поле Password в форме регистрации
+    NAME_FORM = By.XPATH, '//label[contains(text(), "Имя")]/following-sibling::input[@name="name"]'  # Поле Name в форме регистрации
+    EMAIL_FORM = By.XPATH, '//label[contains(text(), "Email")]/following-sibling::input[@name="name"]'  # Поле Email в форме регистрации
+    PASSWORD_FORM = By.XPATH, '//label[contains(text(), "Пароль")]/following-sibling::input[@name="Пароль"]'  # Поле Password в форме регистрации
     BUTTON_REGISTRATION = By.XPATH, './/button[text()="Зарегистрироваться"]'  # Кнопка регистрации
     PASSWORD_ERROR_MESSAGE = By.XPATH, './/p[@class="input__error text_type_main-default"]'  # Сообщение ошибки валидации пароля
 
     LOGO_LOGIN_PAGE = By.XPATH, './/h2[text()="Вход"]'  # Логотип страницы логина
-    EMAIL_LOGIN_FORM = By.CSS_SELECTOR, '* > fieldset:nth-child(1) > div > div > input'  # Поле Email в форме авторизации
-    PASSWORD_LOGIN_FORM = By.CSS_SELECTOR, '* > fieldset:nth-child(2) > div > div > input'  # Поле Password в форме авторизации
     BUTTON_LOGIN_MAINPAGE = By.XPATH, './/button[text()="Войти в аккаунт"]'  # Кнопка авторизации на главной странице
     BUTTON_LOGIN = By.XPATH, './/button[text()="Войти"]'  # Кнопка авторизации на странице авторизации
     BUTTON_CREATE_ORDER = By.XPATH, './/button[text()="Оформить заказ"]'  # Кнопка оформления заказа на главной странице

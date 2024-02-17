@@ -13,8 +13,8 @@ class TestPersonalAccount:
 
         driver.get(TestData.MAIN_URL)
         driver.find_element(*TestLocators.BUTTON_LOGIN_MAINPAGE).click()
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_PERSONAL_ACCOUNT))
@@ -34,8 +34,8 @@ class TestPersonalAccount:
         """Проверка перехода из личного кабинета в конструктор"""
 
         driver.get(TestData.LOGIN_URL)
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_PERSONAL_ACCOUNT))
@@ -49,8 +49,8 @@ class TestPersonalAccount:
         """Проверка перехода из личного кабинета на главную страницу """
 
         driver.get(TestData.LOGIN_URL)
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_PERSONAL_ACCOUNT))
@@ -64,8 +64,8 @@ class TestPersonalAccount:
         """Проверка разлогина из личного кабинета"""
 
         driver.get(TestData.LOGIN_URL)
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_PERSONAL_ACCOUNT))

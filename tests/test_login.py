@@ -13,8 +13,8 @@ class TestLogin:
 
         driver.get(TestData.MAIN_URL)
         driver.find_element(*TestLocators.BUTTON_LOGIN_MAINPAGE).click()
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_CREATE_ORDER))
@@ -25,8 +25,8 @@ class TestLogin:
 
         driver.get(TestData.MAIN_URL)
         driver.find_element(*TestLocators.BUTTON_PERSONAL_ACCOUNT).click()
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_CREATE_ORDER))
@@ -37,8 +37,8 @@ class TestLogin:
 
         driver.get(TestData.REGISTRATION_URL)
         driver.find_element(*TestLocators.BUTTON_LOGIN_REGPAGE).click()
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_CREATE_ORDER))
@@ -49,8 +49,8 @@ class TestLogin:
 
         driver.get(TestData.FORGOT_PASS_URL)
         driver.find_element(*TestLocators.BUTTON_LOGIN_FORGOT_PAGE).click()
-        driver.find_element(*TestLocators.EMAIL_LOGIN_FORM).send_keys(TestData.CREATED_EMAIL)
-        driver.find_element(*TestLocators.PASSWORD_LOGIN_FORM).send_keys(TestData.CREATED_PASSWORD)
+        driver.find_element(*TestLocators.EMAIL_FORM).send_keys(TestData.CREATED_EMAIL)
+        driver.find_element(*TestLocators.PASSWORD_FORM).send_keys(TestData.CREATED_PASSWORD)
         driver.find_element(*TestLocators.BUTTON_LOGIN).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
             TestLocators.BUTTON_CREATE_ORDER))
